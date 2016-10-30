@@ -1,0 +1,4 @@
+snippet_count = 100;
+//<![CDATA[
+function removeHtmlTag(e,t){if(-1!=e.indexOf("<")){for(var n=e.split("<"),i=0;i<n.length;i++)-1!=n[i].indexOf(">")&&(n[i]=n[i].substring(n[i].indexOf(">")+1,n[i].length));e=n.join("")}for(t=t<e.length-1?t:e.length-2;" "!=e.charAt(t-1)&&-1!=e.indexOf(" ",t);)t++;return e=e.substring(0,t-1),e+"..."}function createSnippet(e){var t=document.getElementById(e),n=snippet_count,i='<div class="snippets">'+removeHtmlTag(t.innerHTML,n)+"</div>";t.innerHTML=i}function vikkagrid_thumbnail(e,t){var n=220,i=160;return image_tag='<img width="'+n+'" height="'+i+'" src="'+e.replace("/s72-c/","/w"+n+"-h"+i+"-c/")+'" alt="'+t.replace(/"/g,"")+'" title="'+t.replace(/"/g,"")+'"/>',""!=t?image_tag:""};
+//]]>
